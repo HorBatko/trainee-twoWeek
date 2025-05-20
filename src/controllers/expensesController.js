@@ -1,8 +1,6 @@
 import { pool } from '../db/db.js';
 import axios from 'axios';
-import dotenv from 'dotenv';
 
-dotenv.config();
 
 const API_KEY = process.env.API_KEY;
 

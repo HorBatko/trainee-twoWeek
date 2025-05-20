@@ -1,11 +1,12 @@
 import express from 'express';
 import dotenv from 'dotenv';
+dotenv.config();
 import branchRoutes from './routes/branches.js';
 import expensesRoters from './routes/expenses.js';
 import reportRouters from './routes/report.js'
 import { errorHandler, notFoundHandler } from './middlewares/errorHandler.js';
 
-dotenv.config();
+
 const app = express();
 
 app.use(express.json());
