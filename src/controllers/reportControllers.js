@@ -24,7 +24,7 @@ export const getReport = async (req, res) => {
     SELECT 
     branches.name AS branch_name,
     branches.budget_usd,
-    SUM(expenses.amount_usd) AS spent_usd
+    ROUND(SUM(expenses.amount_usd), 2) AS spent_usd
     FROM branches
     LEFT JOIN expenses 
     ON branches.id = expenses.branch_id 

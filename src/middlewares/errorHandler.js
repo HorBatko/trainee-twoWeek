@@ -8,8 +8,8 @@ function errorHandler(error, req, res, next) {
     });
   }
 
-  res.status(500).json({
-    status: 500,
+  res.status(400).json({
+    status: 400,
     message: 'Something went wrong',
     error: error.message,
   });
